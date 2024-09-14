@@ -16,6 +16,7 @@ class MainRepository @Inject constructor(private val realm : Realm) {
     suspend fun insertBasicInfo(info : BasicInfo) {
         realm.write { copyToRealm(info) }
         Log.d("MongoRealmCRUDTesting", "Inserted Successfully")
+
     }
 
     suspend fun updateBasicInfo(info : BasicInfo) {
